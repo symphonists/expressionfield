@@ -103,7 +103,7 @@
 			);
 			
 			$label = Widget::Label(__(
-				'%s Case sensetive?', array(
+				'%s Case sensitive?', array(
 				$input->generate()
 			)));
 			
