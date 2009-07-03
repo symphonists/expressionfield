@@ -1,4 +1,4 @@
-Field: Text Box
+Field: Expression
 -------------------------------------------------------------------------------
 
 Define simple expressions and test values against them in a data source.
