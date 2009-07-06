@@ -200,7 +200,7 @@
 			
 			return parent::prepareTableValue(
 				array(
-					'value'		=> General::sanitize($data['compiled'])
+					'value'		=> General::sanitize($data['value'])
 				), $link
 			);
 		}
