@@ -103,7 +103,7 @@
 			);
 			
 			$label = Widget::Label(__(
-				'%s Case sensetive?', array(
+				'%s Case sensitive?', array(
 				$input->generate()
 			)));
 			
@@ -210,7 +210,7 @@
 			
 			return parent::prepareTableValue(
 				array(
-					'value'		=> General::sanitize($data['compiled'])
+					'value'		=> General::sanitize($data['value'])
 				), $link
 			);
 		}
