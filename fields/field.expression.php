@@ -162,8 +162,18 @@
 			);
 			
 			if ($result['is_regexp'] == 'no') {
-				$expression = preg_quote($result['value'], '/');
-				$expression = str_replace('\\*', '.*?', $expression);
+				$choices = preg_split('/\s*,\s*/', $result['value'], -1, PREG_SPLIT_NO_EMPTY);
+				$expression = '';
+				
+				foreach ($choices as $index => $choice) {
+					if ($index) $expression .= '|';
+					
+					$expression .= str_replace(
+						'\\*', '.*?',
+						preg_quote($choice, '/')
+					);
+				}
+				
 				$expression = "^{$expression}$";
 			}
 			
