@@ -220,8 +220,6 @@
 	-------------------------------------------------------------------------*/
 		
 		public function buildDSRetrivalSQL($data, &$joins, &$where, $and = false) {
-			header('content-type: text/plain');
-			
 			if (is_array($data)) {
 				if ($and) $data = implode('+', $data);
 				else $data = implode(',', $data);
