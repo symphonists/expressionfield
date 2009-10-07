@@ -3,9 +3,9 @@ Field: Expression
 
 Define simple expressions and test values against them in a data source.
 
-Version: 1.0.1
+Version: 1.0.3
 Author: Rowan Lewis <rowan@pixelcarnage.com>
-Build Date: 3 July 2009
+Build Date: 8 October 2009
 Requirements: Symphony 2.0.3
 
 

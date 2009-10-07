@@ -8,12 +8,12 @@
 		public function about() {
 			return array(
 				'name'			=> 'Field: Expression',
-				'version'		=> '1.0.1',
-				'release-date'	=> '2009-07-03',
+				'version'		=> '1.0.3',
+				'release-date'	=> '2009-10-08',
 				'author'		=> array(
 					'name'			=> 'Rowan Lewis',
-					'website'		=> 'http://pixelcarnage.com/',
-					'email'			=> 'rowan@pixelcarnage.com'
+					'website'		=> 'http://rowanlewis.com/',
+					'email'			=> 'me@rowanlewis.com'
 				),
 				'description' => 'Define simple expressions and test values against them in a data source.'
 			);
@@ -43,7 +43,7 @@
 		protected $addedHeaders = false;
 		
 		public function addHeaders($page) {
-			if (!$this->addedHeaders) {
+			if ($page instanceof ContentPublish and !$this->addedHeaders) {
 				$page->addStylesheetToHead(URL . '/extensions/expressionfield/assets/publish.css', 'screen', 10262810);
 				
 				$this->addedHeaders = true;
