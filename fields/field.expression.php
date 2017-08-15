@@ -46,8 +46,18 @@
 		}
 
 		public function commit() {
+			if (!parent::commit()) {
+				return false;
+			}
+			$id = $this->get('id');
+			if ($id === false) {
+				return false;
+			}
 			$this->set('required', 'yes');
-			return parent::commit();
+			$fields = array(
+				'field_id' => $id,
+			);
+			return FieldManager::saveSettings($id, $fields);
 		}
 
 	/*-------------------------------------------------------------------------
